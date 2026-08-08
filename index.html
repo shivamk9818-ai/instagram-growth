@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Instagram Followers</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.card {
+    width: 90%;
+    max-width: 420px;
+    background: rgba(0,0,0,0.35);
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 5px 0 10px;
+    font-size: 30px;
+}
+
+p {
+    color: #eee;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    margin: 15px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: #d62976;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+#loading, #result {
+    display: none;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.prank {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.small {
+    font-size: 13px;
+    color: #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="logo">📸</div>
+
+    <div id="main">
+        <h1>FREE INSTAGRAM FOLLOWERS</h1>
+        <p>Get free followers instantly 🚀</p>
+
+        <input id="username" type="text"
+               placeholder="@yourusername"
+               autocomplete="off">
+
+        <button onclick="startProcess()">
+            GET FREE FOLLOWERS 🚀
+        </button>
+
+        <p class="small">
+            Enter username only. Never enter your password or OTP.
+        </p>
+    </div>
+
+    <div id="loading">
+        <h2>Processing...</h2>
+        <div class="loader"></div>
+        <p id="status">Connecting...</p>
+    </div>
+
+    <div id="result">
+        <div class="prank">😂 PRANK! 😂</div>
+        <h2>Followers nahi mile!</h2>
+        <p>Bas aapka prank ho gaya 😜</p>
+        <p>Instagram password ya OTP kabhi share mat karna.</p>
+    </div>
+
+</div>
+
+<script>
+function startProcess() {
+
+    const username = document.getElementById("username").value.trim();
+
+    if (username === "") {
+        alert("Please enter your Instagram username!");
+        return;
+    }
+
+    document.getElementById("main").style.display = "none";
+    document.getElementById("loading").style.display = "block";
+
+    const status = document.getElementById("status");
+
+    setTimeout(() => {
+        status.innerText = "Checking profile...";
+    }, 1800);
+
+    setTimeout(() => {
+        status.innerText = "Generating followers...";
+    }, 3600);
+
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("result").style.display = "block";
+    }, 5500);
+}
+</script>
+
+</body>
+</html>
